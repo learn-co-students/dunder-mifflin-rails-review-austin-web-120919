@@ -1,0 +1,12 @@
+<h1>Employees</h1>
+<%= @employees.each do |employee| %>
+    <div name ="<%= employee.id %>">
+        <h2><%= link_to employee.to_s, employee_path(employee) %></h2>
+        <ul>
+            <li>Title: <%= employee.title %></li>
+            <li>Alias: <%= employee.alias %></li>
+            <li>Dog: <%= link_to employee.dog.name, dog_path(employee.dog) %></li>
+        </ul>
+    </div>
+<% end %>
+    
