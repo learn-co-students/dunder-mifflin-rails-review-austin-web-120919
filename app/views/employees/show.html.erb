@@ -1,0 +1,7 @@
+<h1><%= @employee.to_s %></h1>
+Title: <%= @employee.title %>
+Alias: <%= @employee.alias %>
+Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %>
+
+<%= image_tag(@employee.to_s.gsub(/\s+/, "").downcase + '.png') %>
+
